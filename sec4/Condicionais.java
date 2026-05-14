@@ -160,6 +160,28 @@ public class Condicionais {
             default:
                 System.out.println("executou Default");
         }
+
+
+    // =========================================================
+    // Condicional Ternária
+    // =========================================================
+
+    /**
+     * É uma forma compacta de if-else
+     * 
+     * Sintaxe: condição? expressão1 : expressão2;
+     * 
+     * Avalia a condição, se for verdadeira, retorna a expressão 1,
+     * se for falsa, retorna a expressão2
+     * 
+     * O ideal é utilizar somente em expressões simples para manter
+     * a legibilidade
+     */
+
+        int numeral = 10;
+        String resultado = (numeral % 2 == 0) ? "Par" : "Ímpar";
+        System.out.println(resultado);
+
     }
 
 }
