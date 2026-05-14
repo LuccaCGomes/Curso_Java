@@ -176,6 +176,8 @@ public class Condicionais {
      * 
      * O ideal é utilizar somente em expressões simples para manter
      * a legibilidade
+     * 
+     * Utilizado para atribuir um valor condicional a uma variável
      */
 
         int numeral = 10;
