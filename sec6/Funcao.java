@@ -45,6 +45,10 @@ public class Funcao {
         soma(2, 3);
         double massaCorporal = imc(100, 1.80);
         System.out.println("IMC: " + massaCorporal);
+
+        // Testando System.exit()
+        verificarAutenticacao("teste", "testando");
+        System.out.println("Se entrar no exit, essa mensagem não aparecerá");
     }
 
 
@@ -70,5 +74,33 @@ public class Funcao {
     public static double imc(double peso, double altura) {
         double indice = peso / (altura * altura);
         return indice;
+    }
+
+
+    // =========================================================
+    // System.exit
+    // =========================================================
+
+    /**
+     * Encerra imediatamente a execução do programa, finalizando todas as
+     * operações em andamento. Logo deve ser usado com cuidado, normalmente
+     * em casos de erro crítico ou quando não há mais nada a ser feito.
+     * 
+     * Casos de Uso: Tratamento de Erro, em cenários onde o programa não
+     * deve continuar devido a um erro crítico. Interrupção controlada: Quando
+     * o programa atinge um estado em que deve ser encerrado imediatamente, como
+     * após a saída do usuário.
+     * 
+     * Sintaxe: System.exit(int status)
+     * O argumento <int status> indica o estado do término do programa, sendo o 0
+     * normalmente o indicativo de saída bem sucedida, e valores diferentes de 0 algum erro.
+     */
+
+    public static void verificarAutenticacao(String usuario, String senha) {
+        if(!usuario.equals("admin") && !senha.equals("SenhaSegura")){
+            System.out.println("Autenticação Falhou");
+            System.exit(1);
+        }
+        System.out.println("Autenticação bem sucedida");
     }
 }
