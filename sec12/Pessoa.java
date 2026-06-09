@@ -1,6 +1,24 @@
 package sec12;
 
 public class Pessoa {
+
+
+    // ==============================================
+    // MODIFICADORES DE ACESSO
+    // ==============================================
+
+    /**
+     * Controlam a visibilidade dos membros de uma classe (Atributos e Métodos).
+     * 
+     * - public: O membro pode ser acessado de qualquer lugar(dentro e fora do pacote)
+     * - private: O membro só pode ser acessado dentro da própria classe
+     * - Protected: O membro só pode ser acessado dentro da classe, suas subclasses e
+     *              classes do mesmo pacote
+     * 
+     * O uso dos modificadores de acesso são FUNDAMENTAIS para aplicar o encapsulamento,
+     * eles protegem os dados e métodos, garantindo o controle de como eles são
+     * acessados e modificados.
+     */
     
     private String nome;
     private int idade;
