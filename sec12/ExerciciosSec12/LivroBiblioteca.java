@@ -1,4 +1,4 @@
-package sec12;
+package sec12.ExerciciosSec12;
 
 public class LivroBiblioteca {
     
