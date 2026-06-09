@@ -1,5 +1,7 @@
 package sec12;
 
+import java.util.Arrays;
+
 public class OrientacaoObjetos {
     
     /**
@@ -63,7 +65,31 @@ public class OrientacaoObjetos {
 
         PessoaImutavel pessoaImutavel = new PessoaImutavel("Alice", 23);
         System.out.println(pessoaImutavel.getNome());
-        System.out.println(pessoaImutavel.getIdade());    
+        System.out.println(pessoaImutavel.getIdade());
+        
+        // =======================================
+        // ENCAPSULAMENTO DE ARRAYS
+        // =======================================
+        /**
+         * Ao trabalhar com Arrays e coleções, o encapsulamento é igualmente
+         * importante. Para encapsular eles, usamos getters e setters, garantindo
+         * que acessos e modificações sejam feitos de forma controlada.
+         * 
+         * Arrays e Coleções contêm múltiplos dados, e expô-los diretamente
+         * pode permitir modificações não controladas, causando inconsistências. 
+         * Por isso, é importante fornecer cópias ao expor arrays e coleções, garantindo
+         * que o conteúdo original não seja alterado diretamente.
+         */
+
+        String[] meusAlunos = {"Ana", "Beto", "Carla", "Daniel", "Esther", "Fábio"};
+        Turma novaTurma = new Turma(meusAlunos);
+        
+        System.out.println(Arrays.toString(novaTurma.getAlunos()));
+        
+        String[] novosAlunos = {"Alan", "Brenda", "Ciro", "Daiane"};
+        novaTurma.setAlunos(novosAlunos);
+        
+        System.out.println(Arrays.toString(novaTurma.getAlunos()));
     }
 
 
