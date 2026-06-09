@@ -43,9 +43,27 @@ public class OrientacaoObjetos {
         carro2.exibirInfo();
 
 
-        
+        // =======================================
+        // CLASSES IMUTÁVEIS
+        // =======================================
+        /**
+         * São aquelas cujas instâncias (objetos) não podem ser modificadas
+         * depois de criadas.
+         * 
+         * Todos os atributos da uma classe imutável são declarados como
+         * private e final, portanto, não há setters e qualquer alteração nos
+         * atributosrequer a criação de um novo objeto.
+         * 
+         * Com isso elas garantem consistência e segurança no código,
+         * evitando mudanças inesperadas no estado do objeto.
+         * 
+         * Elas são particularmente úteis em programação multithread, pois eliminam
+         * a necessidade de sincronização.
+         */
 
-        
+        PessoaImutavel pessoaImutavel = new PessoaImutavel("Alice", 23);
+        System.out.println(pessoaImutavel.getNome());
+        System.out.println(pessoaImutavel.getIdade());    
     }
 
 
