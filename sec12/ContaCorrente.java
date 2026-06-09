@@ -11,6 +11,12 @@ public class ContaCorrente {
         this.saldo = saldo;
     }
 
+    public ContaCorrente(String titular, double saldo, double limiteSaque) {
+        this.titular = titular;
+        this.saldo = saldo;
+        this.limiteSaque = limiteSaque;    
+    }
+
     public void depositar(double deposito) {
         if (deposito <= 0) {
             System.out.println("Valor deve ser maior que zero");
